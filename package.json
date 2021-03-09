@@ -48,8 +48,8 @@
     "setup": "ts-node setup",
     "doc": "cd md_gen && npm start",
     "check-info": "node check_info.js",
-    "coverage": "nyc npm run test",
-    "test": "mocha -r ts-node/register \"plugins/**/*.spec.js\" --timeout 10000",
+    "coverage": "nyc --reporter=lcov npm run test",
+    "test": "mocha -r ts-node/register \"plugins/scratchh/**/*.spec.js\" --timeout 10000",
     "lint": "eslint \"plugins/**/*.ts\"",
     "lint:fix": "eslint --quiet --fix \"plugins/**/*.ts\"",
     "transpile": "tsc"
